@@ -1,0 +1,61 @@
+<!-- 
+Name: Bonita Li
+Assignment: Assignment 2
+Date: June 13, 2022
+
+Description: Confirmation page for cheese ordering application
+ -->
+ 
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Order Confirmed</title>
+	<link href="../static/css/main.css" rel="stylesheet" type="text/css" media="all" th:href="@{css/main.css}">
+</head>
+<body>
+
+	<!-- Header section of the page -->
+	<header>
+		<img src="../static/images/cheeseheader.jpg" alt="grated cheese header" th:src="@{images/cheeseheader.jpg}" class="cheeseheader">
+		<div class="heading">
+			<h1>Sydney's Cheesey Cheese</h1>
+			<h2>Order Confirmed</h2>
+		</div>
+	</header>
+	
+	<hr>
+	
+	<!-- Image with the output -->
+	<img src="../static/images/cheese.jpg" alt="blocks of cheese" th:src="@{images/cheese.jpg}" class="cheeseimg">
+	
+	<!-- Cheese table output section -->
+	<table>
+		<caption>Your Order Details</caption>
+		<tr>
+			<td><b>Name: </b></td>
+			<td th:text="${cheese.name}"></td>
+		</tr>
+		<tr>
+			<td><b>Amount: </b></td>
+			<td th:text="${quantity} + ' x ' + ${cheese.unitNumber} + ' ' + ${cheese.units} + ' @ $' + ${#numbers.formatDecimal(cheese.price,1,2)}"></td>
+		</tr>
+		<tr>
+			<td><b>Total: </b></td>
+			<td th:text="'$' + ${#numbers.formatDecimal(cheese.calcTotal(quantity),1,2)}"></td>
+		</tr>
+	</table>
+	
+	<!-- Link to return to index page and place another order -->
+	<div class="cfLink">
+		<a href="/orderform">Place another Order</a>
+		<br><br>
+		<a href="/index.*">Back to Sydney's Cheesey Cheese</a>
+	</div>	
+	
+	<!-- Footer section of the page -->
+	<footer>&copy; Bonita Li</footer>
+	
+	
+</body>
+</html>

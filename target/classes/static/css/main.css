@@ -1,0 +1,151 @@
+/*
+ Name: Bonita Li
+ Assignment: Assignment 1
+ Description: Used order.html,index.html, and confirm.html for Cheese 
+ ordering application.
+*/
+
+@charset "UTF-8";
+
+/* Style for cheese header image */
+ .cheeseheader {
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	width: 100%;
+ }
+ 
+ /* Style for cheese image in form */
+ .cheeseimg {
+ 	float: right;
+ 	margin-right: 5%;
+ 	width: 42%;	
+ }
+ 
+ /* Styling for form */
+ form {
+ 	background-color: floralwhite;
+ 	border: 2px solid goldenrod;
+ 	margin-left: 10%;
+ 	margin-right: 50%;
+ 	padding: 1%;
+ 	width: 35%;	
+ 	
+ }
+ 
+ /* Style for footer */
+ footer {
+ 	clear: both;
+ 	padding-top: 30px;
+    text-align: center;
+ }
+
+/* Selector for heading class*/
+ .heading {
+    margin: auto;
+    text-align: center;
+ }
+ 
+ /* Style for horizontal rule */
+ hr {
+ 	background-color: black;
+ 	height: 3px;
+ 	margin-bottom: 30px;
+ 	width: 95%;
+ }
+ 
+ /* Selector and style for main class */
+ .main {
+	background-color: floralwhite;
+	float: right;
+	margin-right: 5%;
+	padding-left: 30px;
+	padding-right:10px;
+	width: 65%;
+ }
+ 
+ /* Spec Sheet text input width */
+ .specSheet {
+ 	width: 80%;
+ }
+ 
+ /* Selectors for navigation: */
+ 
+/* General navigation style*/
+ nav {
+	float: left;	
+	margin-right: 2%;
+	width: 22%;
+ }
+ 
+ /* Navigation anchor link colour */
+ nav a:link {
+ 	color: black;
+ }
+ 
+ /* Navigation anchor visited colour*/
+ nav a:visited {
+ 	color: orange;
+ }
+ 
+ /* Navigation listing style */
+ nav li{
+ 	background-color: lemonchiffon;
+ 	border-left: 3px solid goldenrod;
+ 	list-style-type: none;
+ 	margin-left: 15%;
+ 	padding-top: 5%;
+ 	padding-bottom: 5%;
+ 	padding-left: 15%;
+ }
+ 
+ /* Navigation list hover colour */
+ nav li:hover {
+ 	background: peachpuff;
+ }
+ 
+ /* Style for confirmation table */
+ table {
+	width: 35%;	
+	margin-left: 10%;
+ 	margin-right: 50%;
+ 	background-color: floralwhite;
+	border: 2px solid goldenrod;
+	border-spacing: 0;
+}
+ 
+ th, td {
+	padding: 2%;
+ 	text-align: left;
+ 	border: 1px solid goldenrod;
+ 	border-collapse: collapse;
+ }
+ 
+ caption {
+ 	font-weight: bold;
+ 	padding-bottom: 1%;
+ }
+ 
+ /* Style for links on confirmation page */
+ .cfLink {
+ 	margin-left: 10%;
+ 	margin-right: 50%;
+ 	padding: 1%;
+ 	margin-top: 5%;
+ 	width: 33%;
+ 	background-color: floralwhite;
+ 	border: 2px solid goldenrod;	
+ }
+ 
+ a:link {
+ 	color: black;
+ }
+ 
+ a:visited {
+ 	color: orange;
+ }
+ 
+ a:hover {
+ 	background: peachpuff;
+ }
+ 
+ 

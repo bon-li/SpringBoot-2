@@ -1,0 +1,99 @@
+<!-- 
+Name: Bonita Li
+Assignment: Assignment 2
+Date: June 13, 2022
+
+Description: Ordering form for cheese ordering application
+ -->
+ 
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Cheese Ordering Form</title>
+	<link href="../static/css/main.css" rel="stylesheet" type="text/css" 
+	media="all" th:href="@{css/main.css}">
+</head>
+<body>
+
+	<!-- Header section of the page -->
+	<header>
+		<div class="heading">
+			<h1>Cheese Ordering</h1>
+		</div>
+	</header>
+	
+	<hr>
+	
+	<!-- Image with the form -->
+	<img src="../static/images/cheese.jpg" alt="blocks of cheese" 
+	th:src="@{images/cheese.jpg}" class="cheeseimg">
+	
+	<!-- Cheese form input section -->
+	<form method="get" action="/submit" th:object="${cheese}">
+	<p> 
+		
+		<!-- Input for cheese name -->
+		<label for="name">Cheese Name:
+			<input type="text" id="name" name="name" th:field="*{name}" required> 
+		</label>
+		
+		<br><br>
+		
+		<!-- Input for weight of cheese -->
+		<label for="weight">Weight: 
+			<input type="number" id="unitNumber" name="unitNumber" value="10" 
+			max="99" th:field="*{unitNumber}" required>
+		</label>
+		
+		<!-- Input for type of unit -->
+		<label for="units">Units:
+			<select id="units" name="units" th:field="*{units}" required>
+				<option th:each="units : *{T(ca.sheridancollege.libon.
+	            	A2_libon.repositories.Units).values()}"
+	            	th:value="${units.name()}"
+	            	th:text="${units}"></option>
+			</select>
+		</label>
+		
+		<br><br>
+		
+		<!-- Input for price -->
+		<label for="price">Price:
+			<input type="text" id="price" name="price" th:field="*{price}"required>
+		</label>
+		
+		<br><br>
+		
+		<!-- Input for Spec Sheet URL -->
+		<label for="specSheet">Spec Sheet URL:
+			<br>
+			<input type="text" id="specSheet" name="specSheet" class="specSheet" 
+			th:field="*{specSheet}">
+		</label>
+		
+		<br><br>
+		
+		<!-- Input for number of cheese -->
+		<label for="quantity">Number of Units:
+			<input type="number" id="quantity" name="quantity" value="25" min="1" 
+			max="255" required>
+		</label>
+		
+		<br><br>		
+		</p>
+		
+		<!-- Submit and reset button -->
+		<p>
+			<input type="submit" value="Submit">
+			<input type="reset" value="Reset">
+		</p>	
+		
+		<!-- Link to return to index page -->
+		<p>
+			<a href="/index.*">Back to Sydney's Cheesey Cheese</a>
+		</p>
+		
+	</form>
+</body>
+</html>
